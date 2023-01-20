@@ -1,0 +1,6 @@
+C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Utilidades\bin\Debug\RH.Utilidades.dll
+C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Utilidades\bin\Debug\RH.Utilidades.pdb
+C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Utilidades\obj\Debug\RH.Utilidades.csproj.AssemblyReference.cache
+C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Utilidades\obj\Debug\RH.Utilidades.csproj.CoreCompileInputs.cache
+C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Utilidades\obj\Debug\RH.Utilidades.dll
+C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Utilidades\obj\Debug\RH.Utilidades.pdb
