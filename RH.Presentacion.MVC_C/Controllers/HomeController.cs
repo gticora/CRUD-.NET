@@ -231,5 +231,42 @@ namespace RH.Presentacion.MVC_C.Controllers
 
         }
 
+
+
+
+        [HttpPost]
+        public bool Eliminar(int IdPersona)
+        {
+            var url = $"http://localhost:60452/api/EliminarPersona?IdPersona={IdPersona}";
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "DELETE";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            try
+            {
+                using (WebResponse response = request.GetResponse())
+                {
+                    using (Stream strReader = response.GetResponseStream())
+                    {
+                        //if (strReader == null) return;
+                        using (StreamReader objReader = new StreamReader(strReader))
+                        {
+                            string responseBody = objReader.ReadToEnd();
+                            // Do something with responseBody
+                            return true;
+
+                        }
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+
+                return false;
+            }
+
+            
+        }
+
     }
 }

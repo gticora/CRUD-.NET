@@ -6,12 +6,11 @@
 }
 
 <h2>@ViewBag.Title.</h2>
-
 <p> @ViewBag.Message</p>
 
 <div>
     <p>
-        @Html.ActionLink("Nuevo", "FormCreateUpdate",null, new { @class = "btn btn-success btn-large" })
+        @Html.ActionLink("Nuevo", "FormCreateUpdate", null, new { @class = "btn btn-success btn-large" })
     </p>
     <dl>
         <dd>
@@ -39,8 +38,12 @@
                             @per.Telefono
                         </td>
                         <td>
-                            @Html.ActionLink("Editar", "FormCreateUpdate", new { id = per.IdPersona }, new { @class = "btn btn-primary btn-large" }) | 
-                            @Html.ActionLink("Eliminar", "Delete", new { id = per.IdPersona }, new { @class = "btn btn-danger btn-large" })
+                            @Html.ActionLink("Editar", "FormCreateUpdate", new { id = per.IdPersona }, new { @class = "btn btn-primary btn-large" }) |
+                            @Html.ActionLink("Eliminar", "Delete", new { id = per.IdPersona }, new { @class = "btn btn-danger btn-large" })|
+                            <button id="SubmitBtn" type="submit" class="btn btn-primary" onclick="elimina('@per.IdPersona', '@per.Nombre')">
+                                Eliminar con ajax
+                            </button>
+                            
                         </td>
                     </tr>
                 }
@@ -48,6 +51,47 @@
         </dd>
     </dl>
 </div>
+@section scripts {
+    <script type="text/javascript">
+
+        function elimina(id, name) {
+            var opcion = confirm("Desea eliminar la persona: " + name);
+            if (opcion == true) {
+                $.ajax({
+                    url: "/Home/Eliminar", // Url
+                    data: {
+                        IdPersona: id
+                    },
+                    type: "post",  // Verbo HTTP
+                    datatype: "json"
+                })
+                // Se ejecuta si todo fue bien.
+                .done(function (result) {
+                    if (result) {
+                        alert("Se elimino correctamente.");
+                        location.reload();
+                    }
+                    else {
+                        alert("Se presento un inconveniente.");
+                    }
+                })
+                // Se ejecuta si se produjo un error.
+                .fail(function (xhr, status, error) {
+
+                })
+                // Hacer algo siempre, haya sido exitosa o no.
+                .always(function () {
+
+                });
+          
+            } else {
+                return false;
+            }
+
+        }
+
+    </script>
+}
 
 
 
