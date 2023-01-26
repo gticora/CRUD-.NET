@@ -1,0 +1,57 @@
+﻿@model RH.Presentacion.MVC_C.Models.PersonaModel
+
+@{
+    ViewBag.Title = "Home Page";
+
+}
+
+@{
+    if (ViewBag.Message != null)
+    {
+        <div>
+            @ViewBag.Message
+        </div>
+    }
+}
+
+<div>
+    <p>
+        @Html.ActionLink("Nuevo", "FormCreateUpdate")
+    </p>
+    <dl>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
+                    <th>Acciones</th>
+                </tr>
+                @foreach (var per in (IEnumerable<RH.Presentacion.MVC_C.Models.PersonaModel>)ViewBag.Personas)
+                {
+                    <tr>
+                        <td>
+                            @per.IdPersona
+                        </td>
+                        <td>
+                            @per.Nombre
+                        </td>
+                        <td>
+                            @per.Apellido
+                        </td>
+                        <td>
+                            @per.Telefono
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "FormCreateUpdate", new { id = per.IdPersona }) | @Html.ActionLink("Eliminar", "Delete", new { id = per.IdPersona })
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+
+
+
