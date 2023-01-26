@@ -2,18 +2,19 @@
 
 
 
+
 @using (Html.BeginForm("CreateUpdate", "Home", FormMethod.Post))
 {
     <div class="jumbotron">
-        <h1>CRUD</h1>
+        <h2>@ViewBag.Title.</h2>
     </div>
 
-    <div class="row" style = "display: none;">
+    <div class="row" style="display: none;">
         <div class="col-xs-6">
             <label>Id persona</label>
         </div>
         <div class="col-xs-6">
-            @Html.TextBoxFor(m => m.IdPersona, new { @class = "form-control"})
+            @Html.TextBoxFor(m => m.IdPersona, new { @class = "form-control" })
         </div>
     </div>
     <br />
@@ -43,7 +44,9 @@
             @Html.TextBoxFor(m => m.Telefono, new { @class = "form-control" })
         </div>
     </div>
+    <br />
+    <input id="Submit" type="submit" value="Guardar" class="btn btn-success btn-large" />
 
-    <input id="Submit" type="submit" value="submit" />
+    @Html.ActionLink("Regresar", "Listar", null, new { @class = "btn btn-info btn-large" })
 }
 

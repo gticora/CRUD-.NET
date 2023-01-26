@@ -41,20 +41,23 @@ namespace RH.Presentacion.MVC_C.Controllers
             }
             catch (WebException ex)
             {
-                // Handle error
+                TempData["valor"] = ex.Message;
             }
 
             ViewBag.Personas = personas;
+           // TempData["valor"] = "Se elimino correctamente";
+            ViewBag.Message = TempData["Valor"];
+           
 
             return View();
+
 
         }
 
 
         public ActionResult FormCreateUpdate(string id = null)
         {
-            //List<PersonaModel> personas = new List<PersonaModel>();
-
+           
             if (!string.IsNullOrEmpty(id))
             {
                 PersonaModel persona = new PersonaModel();
@@ -85,11 +88,13 @@ namespace RH.Presentacion.MVC_C.Controllers
                     // Handle error
                 }
                 ViewBag.Persona = persona;
+                ViewBag.Title = "Editar persona";
                 return View(persona);
 
             }
             else
             {
+                ViewBag.Title = "Crear persona";
                 return View();
             }
 
@@ -116,21 +121,35 @@ namespace RH.Presentacion.MVC_C.Controllers
                         {
                             string responseBody = objReader.ReadToEnd();
                             // Do something with responseBody
-                            Console.WriteLine(responseBody);
-                            // if (responseBody)
-                            // {
-                            //     string msg = "eliminado correctamente";
-                            //}
+                            TempData["valor"] = "Se elimino correctamente";
+
                         }
                     }
                 }
             }
             catch (WebException ex)
             {
-                _ = ex.Message;
+               
+                TempData["valor"] = ex.Message;
             }
-            ViewBag.Message = "Se elimino correctamente";
+           
             return RedirectToAction("Listar");
+        }
+
+        [HttpPost]
+        public ActionResult CreateUpdate(PersonaModel persona)
+        {
+            if (persona.IdPersona == 0)
+            {
+                Create(persona);
+                return RedirectToAction("Listar");
+            }
+            else
+            {
+                Update(persona.IdPersona,persona);
+                return RedirectToAction("Listar");
+            }
+       
         }
 
         public void Update(int id, PersonaModel data)
@@ -159,20 +178,20 @@ namespace RH.Presentacion.MVC_C.Controllers
                         {
                             string responseBody = objReader.ReadToEnd();
                             // Do something with responseBody
-                            Console.WriteLine(responseBody);
+                            TempData["valor"] = "Se actualizo correctamente";
                         }
                     }
                 }
             }
             catch (WebException ex)
             {
-                // Handle error
+                TempData["valor"] = ex.Message;
             }
-            
+
         }
 
 
-        
+
         public void Create(PersonaModel persona)
         {
             //data strserialize = JsonConvert.SerializeObject(persona);
@@ -200,36 +219,17 @@ namespace RH.Presentacion.MVC_C.Controllers
                         {
                             string responseBody = objReader.ReadToEnd();
                             // Do something with responseBody
-                            //Console.WriteLine(responseBody);
+                            TempData["valor"] = "Se creo correctamente";
                         }
                     }
                 }
             }
             catch (WebException ex)
             {
-                // Handle error
+                TempData["valor"] = ex.Message;
             }
-            //ViewBag.Message = "Your contact page.";
 
-            //return RedirectToAction("Listar");
         }
 
-
-        [HttpPost]
-        public ActionResult CreateUpdate(PersonaModel persona)
-        {
-            if (persona.IdPersona == 0)
-            {
-                Create(persona);
-                return RedirectToAction("Listar");
-            }
-            else
-            {
-                Update(persona.IdPersona,persona);
-                return RedirectToAction("Listar");
-            }
-       
-            //return RedirectToAction("FormCreateUpdate");
-        }
     }
 }

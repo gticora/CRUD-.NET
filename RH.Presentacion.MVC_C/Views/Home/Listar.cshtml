@@ -1,22 +1,17 @@
 ﻿@model RH.Presentacion.MVC_C.Models.PersonaModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Listado Personas";
 
 }
 
-@{
-    if (ViewBag.Message != null)
-    {
-        <div>
-            @ViewBag.Message
-        </div>
-    }
-}
+<h2>@ViewBag.Title.</h2>
+
+<p> @ViewBag.Message</p>
 
 <div>
     <p>
-        @Html.ActionLink("Nuevo", "FormCreateUpdate")
+        @Html.ActionLink("Nuevo", "FormCreateUpdate",null, new { @class = "btn btn-success btn-large" })
     </p>
     <dl>
         <dd>
@@ -44,7 +39,8 @@
                             @per.Telefono
                         </td>
                         <td>
-                            @Html.ActionLink("Editar", "FormCreateUpdate", new { id = per.IdPersona }) | @Html.ActionLink("Eliminar", "Delete", new { id = per.IdPersona })
+                            @Html.ActionLink("Editar", "FormCreateUpdate", new { id = per.IdPersona }, new { @class = "btn btn-primary btn-large" }) | 
+                            @Html.ActionLink("Eliminar", "Delete", new { id = per.IdPersona }, new { @class = "btn btn-danger btn-large" })
                         </td>
                     </tr>
                 }
