@@ -5,7 +5,6 @@ C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\bin\Debug\Dapper.Si
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\bin\Debug\Dapper.xml
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\bin\Debug\Dapper.SimpleCRUD.pdb
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\bin\Debug\Dapper.SimpleCRUD.xml
-C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\obj\Debug\RH.Entidades.csproj.AssemblyReference.cache
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\obj\Debug\RH.Entidades.csproj.CoreCompileInputs.cache
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\obj\Debug\RH.Entidades.csproj.CopyComplete
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\obj\Debug\RH.Entidades.dll

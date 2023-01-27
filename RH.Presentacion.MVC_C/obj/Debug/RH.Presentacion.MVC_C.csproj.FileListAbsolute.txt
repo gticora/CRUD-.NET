@@ -79,7 +79,6 @@ C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Presentacion.MVC_C\bin\es\Sys
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Presentacion.MVC_C\bin\es\System.Web.WebPages.resources.dll
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Presentacion.MVC_C\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Presentacion.MVC_C\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Presentacion.MVC_C\obj\Debug\RH.Presentacion.MVC_C.csproj.AssemblyReference.cache
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Presentacion.MVC_C\obj\Debug\RH.Presentacion.MVC_C.csproj.CoreCompileInputs.cache
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Presentacion.MVC_C\obj\Debug\RH.Presentacion.MVC_C.csproj.CopyComplete
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Presentacion.MVC_C\obj\Debug\RH.Presentacion.MVC_C.dll

@@ -1,19 +1,22 @@
 ﻿@model RH.Presentacion.MVC_C.Models.PersonaModel
 
-
-
-
 @using (Html.BeginForm("CreateUpdate", "Home", FormMethod.Post))
 {
     <div class="jumbotron">
         <h2>@ViewBag.Title.</h2>
     </div>
+    <div class="row">
+        @if (@ViewBag.Title == "Editar persona")
+        {
+            <div class="col-xs-6">
+                <label>Id persona</label>
+            </div>
 
-    <div class="row" style="display: none;">
-        <div class="col-xs-6">
-            <label>Id persona</label>
-        </div>
-        <div class="col-xs-6">
+            <div class="col-xs-6">
+                <label>@ViewBag.Persona.IdPersona</label>
+            </div>
+        }
+        <div class="col-xs-6" style="display: none;">
             @Html.TextBoxFor(m => m.IdPersona, new { @class = "form-control" })
         </div>
     </div>
@@ -45,7 +48,13 @@
         </div>
     </div>
     <br />
-    <input id="Submit" type="submit" value="Guardar" class="btn btn-success btn-large" />
+    if (@ViewBag.Title == "Editar persona")
+    {
+        <input id="Submit" type="submit" value="Actualizar" class="btn btn-success btn-large" />
+    }else
+    {
+        <input id="Submit" type="submit" value="Guardar" class="btn btn-success btn-large" />
+    }
 
     @Html.ActionLink("Regresar", "Listar", null, new { @class = "btn btn-info btn-large" })
 }
