@@ -9,3 +9,15 @@ C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\obj\Debug\RH.Entida
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\obj\Debug\RH.Entidades.csproj.CopyComplete
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\obj\Debug\RH.Entidades.dll
 C:\Users\capacitacion2\source\repos\RH.Aseinges\RH.Entidades\obj\Debug\RH.Entidades.pdb
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\bin\Debug\RH.Entidades.dll
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\bin\Debug\RH.Entidades.pdb
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\bin\Debug\Dapper.dll
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\bin\Debug\Dapper.SimpleCRUD.dll
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\bin\Debug\Dapper.xml
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\bin\Debug\Dapper.SimpleCRUD.pdb
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\bin\Debug\Dapper.SimpleCRUD.xml
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\obj\Debug\RH.Entidades.csproj.AssemblyReference.cache
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\obj\Debug\RH.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\obj\Debug\RH.Entidades.csproj.CopyComplete
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\obj\Debug\RH.Entidades.dll
+C:\Users\gaticora\Source\Repos\CRUD-.NET\RH.Entidades\obj\Debug\RH.Entidades.pdb

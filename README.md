@@ -12,4 +12,6 @@ Aplicativo WEB
 API
    ![image](https://user-images.githubusercontent.com/58193833/215146713-8705b1e4-5fab-43ae-8a1c-87ea9e0c7478.png)
 
+ 6. Al descargar el proeycto configurar la cadena de conexion a la base de datos en el proyecto de API en el archivo Web.config
+
 
